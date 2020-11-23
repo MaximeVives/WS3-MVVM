@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using WS3_MVVM.ViewModels;
+using UpperLib.ViewModels;
 
 namespace WS3_MVVM.Views
 {

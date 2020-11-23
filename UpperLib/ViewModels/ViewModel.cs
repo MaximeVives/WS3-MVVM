@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using WS3_MVVM.Models;
+using UpperLib.Models;
 
-namespace WS3_MVVM.ViewModels
+namespace UpperLib.ViewModels
 {
-    class ViewModel
+    public class ViewModel
     {
-        public Word model;
+        private Word model;
         public ViewModel()
         {
             model = new Word("Defaut");
