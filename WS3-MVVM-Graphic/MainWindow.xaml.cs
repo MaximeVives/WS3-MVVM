@@ -32,13 +32,10 @@ namespace WS3_MVVM_Graphic
 
         private void motInitialChanged(object sender, TextChangedEventArgs e)
         {
-            vm.SetWord(InitialWord.Text);
+            vm.model.Mot = InitialWord.Text;
+            vm.ModifyWord();
+            FinalWord.Content = "Votre Nouveau Mot est : " + vm.model.Mot;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            vm.ModifyWord();
-            FinalWord.Content += vm.GetWord();
-        }
     }
 }

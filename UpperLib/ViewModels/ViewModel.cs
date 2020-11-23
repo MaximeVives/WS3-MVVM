@@ -7,20 +7,10 @@ namespace UpperLib.ViewModels
 {
     public class ViewModel
     {
-        private Word model;
+        public Word model;
         public ViewModel()
         {
             model = new Word("Defaut");
-        }
-
-        public void SetWord(string message)
-        {
-            model.Mot = message;
-        }
-
-        public string GetWord()
-        {
-            return model.Mot;
         }
 
         public void ModifyWord()

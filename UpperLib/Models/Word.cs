@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UpperLib.Models
 {
-    class Word
+    public class Word
     {
         private string mot;
 
