@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WS3_MVVM.Model
+namespace WS3_MVVM.Models
 {
     class Word
     {

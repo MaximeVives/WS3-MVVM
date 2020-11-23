@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using WS3_MVVM.Model;
+/*using WS3_MVVM.Models;*/
 
-namespace WS3_MVVM.ViewModel
+namespace WS3_MVVM.ViewModels
 {
-    class Controller
+    class ViewModel
     {
-        public Word model;
-        public Controller()
+        /*public Word model;*/
+        public ViewModel()
         {
-            model = new Word("Defaut");
+            /*model = new Word("Defaut");*/
         }
 
-        public void SetWord(string message)
-        {
-            model.Mot = message;
-        }
+        /*        public void SetWord(string message)
+                {
+                    model.Mot = message;
+                }
 
-        public string GetWord()
-        {
-            return model.Mot;
-        }
+                public string GetWord()
+                {
+                    return model.Mot;
+                }*/
 
         public string ModifyWord(string word)
         {

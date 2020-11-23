@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using WS3_MVVM.ViewModel;
+using WS3_MVVM.ViewModels;
+using WS3_MVVM.Models;
 
-namespace WS3_MVVM.View
+namespace WS3_MVVM.Views
 {
     class Display
     {
-        private Controller vm;
+        private ViewModel vm;
+        private Word word;
 
         public Display()
         {
-            vm = new Controller();
+            vm = new ViewModel();
+            word = new Word("defaut");
         }
 
         public void DisplayWelcome()
@@ -23,18 +26,19 @@ namespace WS3_MVVM.View
         public void ReadWord()
         {
             Console.WriteLine("Entrer le mot à convertir : ");
-            string word = "";
-            while (word.Length == 0)
+            string userInput = "";
+            while (userInput.Length == 0)
             {
-                word = Console.ReadLine();
+                userInput = Console.ReadLine();
             }
-            vm.SetWord(word);
+            word.Mot = userInput;
         }
 
         public void DisplayNewWord()
         {
-            vm.SetWord(vm.ModifyWord(vm.GetWord()));
-            Console.WriteLine($"The new word is {vm.GetWord()}");
+            word.Mot = vm.ModifyWord(word.Mot);
+
+            Console.WriteLine($"The new word is {word.Mot}");
         }
     }
 }

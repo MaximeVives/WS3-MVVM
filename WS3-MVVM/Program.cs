@@ -1,5 +1,5 @@
 ﻿using System;
-using WS3_MVVM.View;
+using WS3_MVVM.Views;
 
 namespace WS3_MVVM
 {
