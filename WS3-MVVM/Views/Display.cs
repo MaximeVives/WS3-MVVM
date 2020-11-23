@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 using WS3_MVVM.ViewModels;
-using WS3_MVVM.Models;
 
 namespace WS3_MVVM.Views
 {
     class Display
     {
         private ViewModel vm;
-        private Word word;
 
         public Display()
         {
             vm = new ViewModel();
-            word = new Word("defaut");
         }
 
         public void DisplayWelcome()
@@ -31,14 +28,13 @@ namespace WS3_MVVM.Views
             {
                 userInput = Console.ReadLine();
             }
-            word.Mot = userInput;
+            vm.SetWord(userInput);
         }
 
         public void DisplayNewWord()
         {
-            word.Mot = vm.ModifyWord(word.Mot);
-
-            Console.WriteLine($"The new word is {word.Mot}");
+            vm.ModifyWord();
+            Console.WriteLine($"The new word is {vm.GetWord()}");
         }
     }
 }

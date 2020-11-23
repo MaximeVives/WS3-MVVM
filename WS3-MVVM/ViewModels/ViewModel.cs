@@ -1,43 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-/*using WS3_MVVM.Models;*/
+using WS3_MVVM.Models;
 
 namespace WS3_MVVM.ViewModels
 {
     class ViewModel
     {
-        /*public Word model;*/
+        public Word model;
         public ViewModel()
         {
-            /*model = new Word("Defaut");*/
+            model = new Word("Defaut");
         }
 
-        /*        public void SetWord(string message)
-                {
-                    model.Mot = message;
-                }
-
-                public string GetWord()
-                {
-                    return model.Mot;
-                }*/
-
-        public string ModifyWord(string word)
+        public void SetWord(string message)
         {
-            char[] motDecomp = new char[word.Length];
+            model.Mot = message;
+        }
 
-            for (int i = 0; i < word.Length; i++)
+        public string GetWord()
+        {
+            return model.Mot;
+        }
+
+        public void ModifyWord()
+        {
+            char[] motDecomp = new char[model.Mot.Length];
+
+            for (int i = 0; i < model.Mot.Length; i++)
             {
-                motDecomp[i] = word[i];
+                motDecomp[i] = model.Mot[i];
 
-                if (Char.IsLower(word[i]))
+                if (Char.IsLower(model.Mot[i]))
                 {
                     motDecomp[i] = Char.ToUpper(motDecomp[i]);
                 }
             }
-            word = new string(motDecomp);
-            return word;
+            model.Mot = new string(motDecomp);
 
         }
     }
