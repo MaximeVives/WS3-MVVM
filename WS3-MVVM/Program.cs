@@ -1,4 +1,5 @@
 ﻿using System;
+using WS3_MVVM.View;
 
 namespace WS3_MVVM
 {
@@ -6,7 +7,10 @@ namespace WS3_MVVM
     {
         static void Main(string[] args)
         {
-
+            Display view = new Display();
+            view.DisplayWelcome();
+            view.ReadWord();
+            view.DisplayNewWord();
         }
     }
 }

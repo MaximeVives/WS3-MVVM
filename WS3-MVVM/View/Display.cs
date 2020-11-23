@@ -20,5 +20,21 @@ namespace WS3_MVVM.View
             Console.WriteLine("Welcome " + userName + ", ConvertToUppercase \n\n");
         }
 
+        public void ReadWord()
+        {
+            Console.WriteLine("Entrer le mot à convertir : ");
+            string word = "";
+            while (word.Length == 0)
+            {
+                word = Console.ReadLine();
+            }
+            vm.SetWord(word);
+        }
+
+        public void DisplayNewWord()
+        {
+            vm.SetWord(vm.ModifyWord(vm.GetWord()));
+            Console.WriteLine($"The new word is {vm.GetWord()}");
+        }
     }
 }
